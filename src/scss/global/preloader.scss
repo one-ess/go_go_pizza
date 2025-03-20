@@ -1,0 +1,33 @@
+@use "../settings/vars" as *;
+
+.preloader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid $dark;
+  border-top-color: $orange;
+  animation: rotate 1s linear infinite;
+}
+
+.preloader_body {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

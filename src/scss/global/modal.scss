@@ -1,0 +1,55 @@
+@use "../settings/vars" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(44, 40, 38, 0.8);
+  z-index: 45;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+  &__product {
+    position: relative;
+    max-width: 368px;
+    width: 100%;
+    padding: 24px;
+    margin: auto;
+    border-radius: 32px;
+    background-color: $white;
+    cursor: default;
+    @media (max-width: 768px) {
+      max-width: 292px;
+      padding: 24px 16px 16px;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    max-width: 724px;
+    width: 100%;
+    padding: 24px 24px 32px;
+    margin: auto;
+    border-radius: 32px;
+    background-color: $white;
+    cursor: default;
+    @media (max-width: 768px) {
+      max-width: 292px;
+      padding: 24px 16px 16px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  &_active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+}

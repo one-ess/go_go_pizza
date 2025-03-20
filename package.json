@@ -1,0 +1,15 @@
+{
+  "name": "go_go_pizza",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.83.4",
+    "vite": "^6.0.11"
+  }
+}

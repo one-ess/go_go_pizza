@@ -1,0 +1,136 @@
+@use "../settings/vars" as *;
+
+.header {
+  position: relative;
+  padding: 40px 0 100px;
+  margin-bottom: 87px;
+  border-radius: 0 0 32px 32px;
+  background-image: linear-gradient(110deg, #eb8a14, #ecd55a);
+  @media (max-width: 1100px) {
+    padding-bottom: 80px;
+  }
+  @media (max-width: 900px) {
+    padding-bottom: 90px;
+  }
+  @media (max-width: 600px) {
+    padding-top: 24px;
+    padding-bottom: 213px;
+    margin-bottom: 43px;
+  }
+
+  &__container {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 30px;
+      width: 670px;
+      height: 591px;
+      background-image: url("./img/pizza.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      @media (max-width: 1100px) {
+        width: 566px;
+        height: 499px;
+      }
+      @media (max-width: 900px) {
+        top: 160px;
+        width: 382px;
+        height: 337px;
+      }
+      @media (max-width: 600px) {
+        top: 249px;
+        right: 21px;
+        width: 261px;
+        height: 230px;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 77px;
+    @media (max-width: 1100px) {
+      margin-bottom: 63px;
+    }
+    @media (max-width: 900px) {
+      margin-bottom: 53px;
+    }
+    @media (max-width: 600px) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__logo {
+    @media (max-width: 600px) {
+      width: 120px;
+    }
+  }
+
+  &__cart {
+    transition: color 0.3s ease;
+    &:hover {
+      color: #eb8a14;
+    }
+  }
+
+  &__title {
+    max-width: 593px;
+    margin-bottom: 24px;
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+    @media (max-width: 1100px) {
+      max-width: 524px;
+      font-size: 64px;
+    }
+    @media (max-width: 600px) {
+      max-width: 292px;
+      margin-bottom: 12px;
+      font-size: 38px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 64px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url("./img/icon-delivery.svg");
+      transform: translateY(-50%);
+    }
+    @media (max-width: 1100px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 600px) {
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+  }
+
+  &__order {
+    padding: 8px 24px;
+    border-radius: 32px;
+    font-size: $fontSize;
+    font-weight: 600;
+    color: $orange;
+    background-color: $white;
+    transition: all 0.3s ease;
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
+    &:hover {
+      color: #fff;
+      background-color: $orange;
+    }
+  }
+}

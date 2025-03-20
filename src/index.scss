@@ -1,0 +1,13 @@
+@use "./scss/settings/fonts";
+@use "./scss/settings/null";
+@use "./scss/settings/base";
+
+@use "./scss/global/preloader.scss";
+@use "./scss/global/modal-product.scss";
+@use "./scss/global/modal-cart.scss";
+@use "./scss/global/modal.scss";
+
+@use "./scss/sections/header.scss";
+@use "./scss/sections/topping.scss";
+@use "./scss/sections/products.scss";
+@use "./scss/sections/footer.scss";
